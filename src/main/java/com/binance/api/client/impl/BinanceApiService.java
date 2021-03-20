@@ -1,10 +1,7 @@
 package com.binance.api.client.impl;
 
 import com.binance.api.client.constant.BinanceApiConstants;
-import com.binance.api.client.domain.OrderSide;
-import com.binance.api.client.domain.OrderType;
-import com.binance.api.client.domain.SwapRemoveType;
-import com.binance.api.client.domain.TimeInForce;
+import com.binance.api.client.domain.*;
 import com.binance.api.client.domain.account.*;
 import com.binance.api.client.domain.account.request.CancelOrderResponse;
 import com.binance.api.client.domain.event.ListenKey;
@@ -297,6 +294,44 @@ public interface BinanceApiService {
             @Query("swapId") String swapId,
             @Query("recvWindow") Long recvWindow,
             @Query("timestamp") Long timestamp);
+    
+    @Headers({BinanceApiConstants.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER, BinanceApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER})
+    @GET("/sapi/v1/accountSnapshot")
+    Call<DailyAccountDetail> getDailyAccountSnapshot(
+    		@Query("type") WalletType type,
+    		@Query("startTime") Long startTime,
+    		@Query("endTime") Long endTime,
+    		@Query("limit") Integer limit,
+    		@Query("recvWindow") Long recvWindow,
+    		@Query("timestamp") Long timestamp);
+    
+    @Headers({BinanceApiConstants.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER, BinanceApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER})
+    @GET("/sapi/v1/lending/daily/product/list")
+    Call<List<FlexibleProduct>> getFlexibleProductList(
+    		@Query("status") StatusFlexibleProduct status,
+    		@Query("featured") String featured,
+    		@Query("recvWindow") Long recvWindow,
+    		@Query("timestamp") Long timestamp);
+    
+    @Headers({BinanceApiConstants.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER, BinanceApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER})
+    @GET("/sapi/v1/lending/union/account")
+    Call<LendingAccount> getLendingAccount(
+    		@Query("recvWindow") Long recvWindow,
+    		@Query("timestamp") Long timestamp);
 
+    /*FUTURES USD*/
 
+    @Headers({BinanceApiConstants.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER, BinanceApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER})
+    @GET("/fapi/v2/account")
+    Call<FuturesUsdAccount> getFuturesUsdAccount(
+            @Query("recvWindow") Long recvWindow,
+            @Query("timestamp") Long timestamp);
+
+    /*FUTURES COIN*/
+
+    @Headers({BinanceApiConstants.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER, BinanceApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER})
+    @GET("/dapi/v1/account")
+    Call<FuturesCoinAccount> getFuturesCoinAccount(
+            @Query("recvWindow") Long recvWindow,
+            @Query("timestamp") Long timestamp);
 }

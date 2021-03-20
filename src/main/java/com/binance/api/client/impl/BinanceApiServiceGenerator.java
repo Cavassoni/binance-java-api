@@ -41,11 +41,7 @@ public class BinanceApiServiceGenerator {
             (Converter<ResponseBody, BinanceApiError>)converterFactory.responseBodyConverter(
                     BinanceApiError.class, new Annotation[0], null);
 
-    public static <S> S createService(Class<S> serviceClass) {
-        return createService(serviceClass, null, null);
-    }
-
-    public static <S> S createService(Class<S> serviceClass, String apiKey, String secret) {
+    public static <S> S createService(Class<S> serviceClass, String apiKey, String secret, String apiBaseUrl) {
         Retrofit.Builder retrofitBuilder = new Retrofit.Builder()
                 .baseUrl(BinanceApiConfig.getApiBaseUrl())
                 .addConverterFactory(converterFactory);
@@ -61,6 +57,10 @@ public class BinanceApiServiceGenerator {
 
         Retrofit retrofit = retrofitBuilder.build();
         return retrofit.create(serviceClass);
+    }
+
+    public static <S> S createService(Class<S> serviceClass, String apiKey, String secret) {
+        return createService(serviceClass, apiKey, secret, BinanceApiConfig.getApiBaseUrl());
     }
 
     /**
