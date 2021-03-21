@@ -17,6 +17,9 @@ public class NetworkList {
     public Boolean withdrawEnable;
     public String withdrawFee;
     public String withdrawMin;
+    public Long updateTime;
+    public String withdrawIntegerMultiple;
+    public String withdrawMax;
 
     public String getAddressRegex() {
         return addressRegex;
@@ -144,5 +147,29 @@ public class NetworkList {
 
     public void setWithdrawMin(String withdrawMin) {
         this.withdrawMin = withdrawMin;
+    }
+
+    public Long getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Long updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public String getWithdrawIntegerMultiple() {
+        return withdrawIntegerMultiple;
+    }
+
+    public void setWithdrawIntegerMultiple(String withdrawIntegerMultiple) {
+        this.withdrawIntegerMultiple = withdrawIntegerMultiple;
+    }
+
+    public String getWithdrawMax() {
+        return withdrawMax;
+    }
+
+    public void setWithdrawMax(String withdrawMax) {
+        this.withdrawMax = withdrawMax;
     }
 }

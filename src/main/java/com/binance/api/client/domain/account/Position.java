@@ -19,6 +19,7 @@ public class Position {
     public String notional;
     public String isolatedWallet;
     public String maxQty;
+    public String notionalValue;
 
     public String getSymbol() {
         return symbol;
@@ -138,6 +139,14 @@ public class Position {
 
     public void setMaxQty(String maxQty) {
         this.maxQty = maxQty;
+    }
+
+    public String getNotionalValue() {
+        return notionalValue;
+    }
+
+    public void setNotionalValue(String notionalValue) {
+        this.notionalValue = notionalValue;
     }
 
     @Override

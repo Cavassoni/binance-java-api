@@ -8,11 +8,7 @@ import com.binance.api.client.BinanceApiLendingRestClient;
 import com.binance.api.client.BinanceApiSpotRestClient;
 import com.binance.api.client.domain.StatusFlexibleProduct;
 import com.binance.api.client.domain.WalletType;
-import com.binance.api.client.domain.account.DailyAccountDetail;
-import com.binance.api.client.domain.account.Data;
-import com.binance.api.client.domain.account.FlexibleProduct;
-import com.binance.api.client.domain.account.LendingAccount;
-import com.binance.api.client.domain.account.SnapshotVo;
+import com.binance.api.client.domain.account.*;
 
 public class LendingEndpointExample {
 
@@ -28,6 +24,8 @@ public class LendingEndpointExample {
 //		System.out.println(detail);
 
 		LendingAccount l = lendingClient.getLendingAccount();
+
+		List<AllCoinsInformation> futuresAccount = lendingClient.getAllCoinsInformation();
 
 		System.out.println(l);
 	}
