@@ -4,22 +4,22 @@ import com.binance.api.client.constant.BinanceApiConstants;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Position {
-    public String symbol;
-    public String initialMargin;
-    public String maintMargin;
-    public String unrealizedProfit;
-    public String positionInitialMargin;
-    public String openOrderInitialMargin;
-    public String leverage;
-    public Boolean isolated;
-    public String entryPrice;
-    public String maxNotional;
-    public String positionSide;
-    public String positionAmt;
-    public String notional;
-    public String isolatedWallet;
-    public String maxQty;
-    public String notionalValue;
+    private String symbol;
+    private String initialMargin;
+    private String maintMargin;
+    private String unrealizedProfit;
+    private String positionInitialMargin;
+    private String openOrderInitialMargin;
+    private String leverage;
+    private Boolean isolated;
+    private String entryPrice;
+    private String maxNotional;
+    private String positionSide;
+    private String positionAmt;
+    private String notional;
+    private String isolatedWallet;
+    private String maxQty;
+    private String notionalValue;
 
     public String getSymbol() {
         return symbol;

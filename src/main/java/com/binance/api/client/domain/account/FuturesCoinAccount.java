@@ -1,6 +1,8 @@
 package com.binance.api.client.domain.account;
 
 import com.binance.api.client.domain.general.Asset;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.util.List;
 
@@ -68,4 +70,10 @@ public class FuturesCoinAccount {
     public void setUpdateTime(Long updateTime) {
         this.updateTime = updateTime;
     }
+
+    @Override
+    public String toString() {
+        return ReflectionToStringBuilder.toString(this, ToStringStyle.JSON_STYLE);
+    }
+
 }

@@ -4,18 +4,18 @@ import com.binance.api.client.constant.BinanceApiConstants;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class AssetFutures {
-    public String asset;
-    public String walletBalance;
-    public String unrealizedProfit;
-    public String marginBalance;
-    public String maintMargin;
-    public String initialMargin;
-    public String positionInitialMargin;
-    public String openOrderInitialMargin;
-    public String maxWithdrawAmount;
-    public String crossWalletBalance;
-    public String crossUnPnl;
-    public String availableBalance;
+    private String asset;
+    private String walletBalance;
+    private String unrealizedProfit;
+    private String marginBalance;
+    private String maintMargin;
+    private String initialMargin;
+    private String positionInitialMargin;
+    private String openOrderInitialMargin;
+    private String maxWithdrawAmount;
+    private String crossWalletBalance;
+    private String crossUnPnl;
+    private String availableBalance;
 
     public String getAsset() {
         return asset;

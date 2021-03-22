@@ -7,24 +7,24 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import java.util.List;
 
 public class FuturesUsdAccount {
-    public Long feeTier;
-    public Boolean canTrade;
-    public Boolean canDeposit;
-    public Boolean canWithdraw;
-    public Long updateTime;
-    public String totalInitialMargin;
-    public String totalMaintMargin;
-    public String totalWalletBalance;
-    public String totalUnrealizedProfit;
-    public String totalMarginBalance;
-    public String totalPositionInitialMargin;
-    public String totalOpenOrderInitialMargin;
-    public String totalCrossWalletBalance;
-    public String totalCrossUnPnl;
-    public String availableBalance;
-    public String maxWithdrawAmount;
-    public List<AssetFutures> assets;
-    public List<Position> positions;
+    private Long feeTier;
+    private Boolean canTrade;
+    private Boolean canDeposit;
+    private Boolean canWithdraw;
+    private Long updateTime;
+    private String totalInitialMargin;
+    private String totalMaintMargin;
+    private String totalWalletBalance;
+    private String totalUnrealizedProfit;
+    private String totalMarginBalance;
+    private String totalPositionInitialMargin;
+    private String totalOpenOrderInitialMargin;
+    private String totalCrossWalletBalance;
+    private String totalCrossUnPnl;
+    private String availableBalance;
+    private String maxWithdrawAmount;
+    private List<AssetFutures> assets;
+    private List<Position> positions;
 
     public Long getFeeTier() {
         return feeTier;
