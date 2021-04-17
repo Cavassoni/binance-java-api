@@ -1,8 +1,10 @@
 package com.binance.api.client.domain.account;
 
 import com.binance.api.client.constant.BinanceApiConstants;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class AssetFutures {
     private String asset;
     private String walletBalance;
@@ -16,6 +18,7 @@ public class AssetFutures {
     private String crossWalletBalance;
     private String crossUnPnl;
     private String availableBalance;
+    private String marginAvailable;
 
     public String getAsset() {
         return asset;
@@ -111,6 +114,14 @@ public class AssetFutures {
 
     public void setAvailableBalance(String availableBalance) {
         this.availableBalance = availableBalance;
+    }
+
+    public String getMarginAvailable() {
+        return marginAvailable;
+    }
+
+    public void setMarginAvailable(String marginAvailable) {
+        this.marginAvailable = marginAvailable;
     }
 
     @Override
