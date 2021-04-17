@@ -1,8 +1,10 @@
 package com.binance.api.client.domain.account;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Balance {
 	private String asset;
 	private String free;

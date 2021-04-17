@@ -1,7 +1,9 @@
 package com.binance.api.client.domain.account;
 
 import com.binance.api.client.domain.LiquidityOperationRecordStatus;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LiquidityOperationRecord {
 
     private String poolId;

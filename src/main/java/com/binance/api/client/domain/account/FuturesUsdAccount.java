@@ -2,10 +2,12 @@ package com.binance.api.client.domain.account;
 
 import com.binance.api.client.constant.BinanceApiConstants;
 import com.binance.api.client.domain.general.Asset;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class FuturesUsdAccount {
     private Long feeTier;
     private Boolean canTrade;

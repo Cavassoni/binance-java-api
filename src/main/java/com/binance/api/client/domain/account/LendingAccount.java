@@ -2,9 +2,11 @@ package com.binance.api.client.domain.account;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LendingAccount {
 
 	private List<PositionAmountVo> positionAmountVos = null;

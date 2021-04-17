@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Account information.
  */
-@JsonIgnoreProperties
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MarginAccount {
 
   private boolean borrowEnabled;
