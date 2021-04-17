@@ -20,6 +20,7 @@ public class Position {
     private String isolatedWallet;
     private String maxQty;
     private String notionalValue;
+    private String updateTime;
 
     public String getSymbol() {
         return symbol;
@@ -147,6 +148,14 @@ public class Position {
 
     public void setNotionalValue(String notionalValue) {
         this.notionalValue = notionalValue;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 
     @Override
